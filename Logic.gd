@@ -93,7 +93,7 @@ func _on_game_receive_start():
 ##
 ## Game information always arrives after system information.
 func _on_game_received(data: RetroHubGameData):
-	print("Game received: %s [%s]" % [data.name, data.system_name])
+	print("Game received: %s [%s]" % [data.name, data.system.name])
 
 ## Called when RetroHub has finished sending all game data.
 func _on_game_receive_end():
