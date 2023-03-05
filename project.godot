@@ -44,6 +44,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/controller_icons/objects/TextureRect.gd"
 }, {
+"base": "TextureRect",
+"class": "LazyTextureRect",
+"language": "GDScript",
+"path": "res://addons/retrohub_theme_helper/ui/LazyTextureRect.gd"
+}, {
 "base": "Resource",
 "class": "RetroHubGameData",
 "language": "GDScript",
@@ -58,6 +63,11 @@ _global_script_classes=[ {
 "class": "RetroHubSystemData",
 "language": "GDScript",
 "path": "res://addons/retrohub_theme_helper/classes/SystemData.gd"
+}, {
+"base": "Node",
+"class": "XML2JSON",
+"language": "GDScript",
+"path": "res://addons/xml2json/XML2JSON.gd"
 } ]
 _global_script_class_icons={
 "ConfigData": "",
@@ -67,9 +77,11 @@ _global_script_class_icons={
 "ControllerSprite": "",
 "ControllerSprite3D": "",
 "ControllerTextureRect": "",
+"LazyTextureRect": "",
 "RetroHubGameData": "",
 "RetroHubGameMediaData": "",
-"RetroHubSystemData": ""
+"RetroHubSystemData": "",
+"XML2JSON": ""
 }
 
 [application]
@@ -83,10 +95,11 @@ config/icon="res://icon.png"
 ControllerIcons="*res://addons/controller_icons/ControllerIcons.gd"
 JSONUtils="*res://addons/retrohub_theme_helper/utils/JSONUtils.gd"
 FileUtils="*res://addons/retrohub_theme_helper/utils/FileUtils.gd"
-RetroHubConfig="*res://addons/retrohub_theme_helper/Config.gd"
-RetroHubUI="*res://addons/retrohub_theme_helper/UI.gd"
-RetroHub="*res://addons/retrohub_theme_helper/RetroHub.gd"
-RetroHubMedia="*res://addons/retrohub_theme_helper/Media.gd"
+RetroHubConfig="*res://addons/retrohub_theme_helper/singletons/Config.gd"
+RetroHubUI="*res://addons/retrohub_theme_helper/singletons/UI.gd"
+RetroHub="*res://addons/retrohub_theme_helper/singletons/RetroHub.gd"
+RetroHubMedia="*res://addons/retrohub_theme_helper/singletons/Media.gd"
+RegionUtils="*res://addons/retrohub_theme_helper/utils/RegionUtils.gd"
 
 [editor_plugins]
 
