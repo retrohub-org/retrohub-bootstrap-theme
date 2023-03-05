@@ -101,6 +101,10 @@ RetroHub="*res://addons/retrohub_theme_helper/singletons/RetroHub.gd"
 RetroHubMedia="*res://addons/retrohub_theme_helper/singletons/Media.gd"
 RegionUtils="*res://addons/retrohub_theme_helper/utils/RegionUtils.gd"
 
+[display]
+
+window/size/height=576
+
 [editor_plugins]
 
 enabled=PoolStringArray( "res://addons/controller_icons/plugin.cfg", "res://addons/retrohub_theme_helper/plugin.cfg" )
