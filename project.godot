@@ -104,6 +104,8 @@ RegionUtils="*res://addons/retrohub_theme_helper/utils/RegionUtils.gd"
 [display]
 
 window/size/height=576
+window/stretch/mode="2d"
+window/stretch/aspect="keep_height"
 
 [editor_plugins]
 
