@@ -100,6 +100,7 @@ RetroHubUI="*res://addons/retrohub_theme_helper/singletons/UI.gd"
 RetroHub="*res://addons/retrohub_theme_helper/singletons/RetroHub.gd"
 RetroHubMedia="*res://addons/retrohub_theme_helper/singletons/Media.gd"
 RegionUtils="*res://addons/retrohub_theme_helper/utils/RegionUtils.gd"
+TTS="*res://addons/godot-tts/TTS.gd"
 
 [display]
 
@@ -109,7 +110,7 @@ window/stretch/aspect="keep_height"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/controller_icons/plugin.cfg", "res://addons/retrohub_theme_helper/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/controller_icons/plugin.cfg", "res://addons/godot-accessibility/plugin.cfg", "res://addons/retrohub_theme_helper/plugin.cfg" )
 
 [gui]
 
