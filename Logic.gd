@@ -3,26 +3,26 @@ extends Node
 # _ready function, called everytime the theme is loaded, and only once
 func _ready():
 	# App related signals
-	RetroHub.connect("app_initializing", self, "_on_app_initializing")
-	RetroHub.connect("app_closing", self, "_on_app_closing")
-	RetroHub.connect("app_received_focus", self, "_on_app_received_focus")
-	RetroHub.connect("app_lost_focus", self, "_on_app_lost_focus")
-	RetroHub.connect("app_returning", self, "_on_app_returning")
+	RetroHub.app_initializing.connect(_on_app_initializing)
+	RetroHub.app_closing.connect(_on_app_closing)
+	RetroHub.app_received_focus.connect(_on_app_received_focus)
+	RetroHub.app_lost_focus.connect(_on_app_lost_focus)
+	RetroHub.app_returning.connect(_on_app_returning)
 
 	# Content related signals
-	RetroHub.connect("system_receive_start", self, "_on_system_receive_start")
-	RetroHub.connect("system_received", self, "_on_system_received")
-	RetroHub.connect("system_receive_end", self, "_on_system_receive_end")
-	RetroHub.connect("game_receive_start", self, "_on_game_receive_start")
-	RetroHub.connect("game_received", self, "_on_game_received")
-	RetroHub.connect("game_receive_end", self, "_on_game_receive_end")
+	RetroHub.system_receive_start.connect(_on_system_receive_start)
+	RetroHub.system_received.connect(_on_system_received)
+	RetroHub.system_receive_end.connect(_on_system_receive_end)
+	RetroHub.game_receive_start.connect(_on_game_receive_start)
+	RetroHub.game_received.connect(_on_game_received)
+	RetroHub.game_receive_end.connect(_on_game_receive_end)
 	
 	# Config related signals
-	RetroHubConfig.connect("config_ready", self, "_on_config_ready")
-	RetroHubConfig.connect("config_updated", self, "_on_config_updated")
-	RetroHubConfig.connect("theme_config_ready", self, "_on_theme_config_ready")
-	RetroHubConfig.connect("theme_config_updated", self, "_on_theme_config_updated")
-	RetroHubConfig.connect("game_data_updated", self, "_on_game_data_updated")
+	RetroHubConfig.config_ready.connect(_on_config_ready)
+	RetroHubConfig.config_updated.connect(_on_config_updated)
+	RetroHubConfig.theme_config_ready.connect(_on_theme_config_ready)
+	RetroHubConfig.theme_config_updated.connect(_on_theme_config_updated)
+	RetroHubConfig.game_data_updated.connect(_on_game_data_updated)
 
 #_unhandled_input, called at every input event
 # use this function for input (not _input/_process) for
