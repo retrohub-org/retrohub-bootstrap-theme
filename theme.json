@@ -2,9 +2,10 @@
 	"id": "_bootstrap_",
 	"name": "Bootstrap",
 	"description": "Base configuration for RetroHub theme development.",
-	"icon": "res://icon.png",
+	"icon": "res://icon.svg",
 	"authors": "RetroHub",
 	"version": "1.0.0",
 	"url": "https://github.com/retrohub-org/retrohub-bootstrap-theme",
-	"entry_scene": "res://Theme.tscn"
+	"entry_scene": "res://Theme.tscn",
+	"config_scene": ""
 }
