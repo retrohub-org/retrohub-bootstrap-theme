@@ -71,9 +71,13 @@
 			{
 				"retroarch": [
 					"caprice32",
-					"crocods"
+					"crocods",
+					"mame"
 				]
-			}
+			},
+			"caprice32",
+			"arnold",
+			"mame"
 		]
 	},
 	{
@@ -92,7 +96,8 @@
 					"mame"
 				]
 			},
-			"mednafen"
+			"mednafen",
+			"mame"
 		]
 	},
 	{
@@ -119,9 +124,13 @@
 		"emulator": [
 			{
 				"retroarch": [
-					"atari800"
+					"atari800",
+					"mame"
 				]
-			}
+			},
+			"atari800",
+			"altirra",
+			"mame"
 		]
 	},
 	{
@@ -147,7 +156,8 @@
 				"retroarch": [
 					"hatari"
 				]
-			}
+			},
+			"hatari"
 		]
 	},
 	{
@@ -166,7 +176,10 @@
 			".zip"
 		],
 		"platform": "bbcmicro",
-		"emulator": []
+		"emulator": [
+			"beebem",
+			"b-em"
+		]
 	},
 	{
 		"name": "c64",
@@ -221,7 +234,9 @@
 					"vice128",
 					"frodo"
 				]
-			}
+			},
+			"denise",
+			"vice"
 		]
 	},
 	{
@@ -247,7 +262,9 @@
 			".dgn"
 		],
 		"platform": "coco",
-		"emulator": []
+		"emulator": [
+			"xroar"
+		]
 	},
 	{
 		"name": "dos",
@@ -278,7 +295,8 @@
 					"dosbox",
 					"dosboxpure"
 				]
-			}
+			},
+			"dosbox"
 		]
 	},
 	{
@@ -349,9 +367,13 @@
 			{
 				"retroarch": [
 					"bluemsx",
-					"fmsx"
+					"fmsx",
+					"mame"
 				]
-			}
+			},
+			"mame",
+			"openmsx",
+			"emulicious"
 		]
 	},
 	{
@@ -375,7 +397,9 @@
 			".wav"
 		],
 		"platform": "oric",
-		"emulator": []
+		"emulator": [
+			"oricutron"
+		]
 	},
 	{
 		"name": "palm",
@@ -414,9 +438,11 @@
 		"emulator": [
 			{
 				"retroarch": [
-					"quasi88"
+					"quasi88",
+					"mame"
 				]
-			}
+			},
+			"mame"
 		]
 	},
 	{
@@ -468,7 +494,8 @@
 				"retroarch": [
 					"simcoupe"
 				]
-			}
+			},
+			"simcoupe"
 		]
 	},
 	{
@@ -489,7 +516,14 @@
 			".ctg"
 		],
 		"platform": "ti99",
-		"emulator": []
+		"emulator": [
+			{
+				"retroarch": [
+					"mame"
+				]
+			},
+			"mame"
+		]
 	},
 	{
 		"name": "to8",
@@ -509,7 +543,9 @@
 			".zip"
 		],
 		"platform": "trs-80",
-		"emulator": []
+		"emulator": [
+			"xroar"
+		]
 	},
 	{
 		"name": "vic20",
@@ -537,9 +573,11 @@
 		"emulator": [
 			{
 				"retroarch": [
+					"mame",
 					"x1"
 				]
-			}
+			},
+			"mame"
 		]
 	},
 	{
@@ -564,9 +602,11 @@
 		"emulator": [
 			{
 				"retroarch": [
-					"px68k"
+					"px68k",
+					"mame"
 				]
-			}
+			},
+			"mame"
 		]
 	},
 	{
@@ -586,7 +626,9 @@
 			".zip"
 		],
 		"platform": "zmachine",
-		"emulator": []
+		"emulator": [
+			"frotz"
+		]
 	},
 	{
 		"name": "zx81",
@@ -603,7 +645,10 @@
 				"retroarch": [
 					"eightyone"
 				]
-			}
+			},
+			"clk",
+			"eightyone",
+			"zesarux"
 		]
 	},
 	{
@@ -628,25 +673,13 @@
 		"emulator": [
 			{
 				"retroarch": [
-					"fuse"
+					"fuse",
+					"eightyone"
 				]
-			}
-		]
-	},
-	{
-		"name": "cavestory",
-		"fullname": "Cave Story (NXEngine)",
-		"category": "engine",
-		"extension": [
-			".exe"
-		],
-		"platform": "cavestory",
-		"emulator": [
-			{
-				"retroarch": [
-					"nxengine"
-				]
-			}
+			},
+			"fuse",
+			"eightyone",
+			"zesarux"
 		]
 	},
 	{
@@ -681,24 +714,8 @@
 				"retroarch": [
 					"prboom"
 				]
-			}
-		]
-	},
-	{
-		"name": "godot",
-		"fullname": "Godot",
-		"category": "engine",
-		"extension": [
-			".pck",
-			".zip"
-		],
-		"platform": "godot",
-		"emulator": [
-			{
-				"retroarch": [
-					"godot"
-				]
-			}
+			},
+			"zdoom"
 		]
 	},
 	{
@@ -719,16 +736,6 @@
 		]
 	},
 	{
-		"name": "openbor",
-		"fullname": "OpenBOR",
-		"category": "engine",
-		"extension": [
-			".pak"
-		],
-		"platform": "openbor",
-		"emulator": []
-	},
-	{
 		"name": "pico8",
 		"fullname": "PICO-8",
 		"category": "engine",
@@ -737,14 +744,17 @@
 			".png"
 		],
 		"platform": "pico8",
-		"emulator": []
+		"emulator": [
+			"pico8"
+		]
 	},
 	{
 		"name": "scummvm",
 		"fullname": "ScummVM",
 		"category": "engine",
 		"extension": [
-			".scummvm"
+			".scummvm",
+			".svm"
 		],
 		"platform": "scummvm",
 		"emulator": [
@@ -763,18 +773,9 @@
 			".solarus"
 		],
 		"platform": "solarus",
-		"emulator": []
-	},
-	{
-		"name": "stratagus",
-		"fullname": "Stratagus",
-		"category": "engine",
-		"extension": [
-			".exe",
-			""
-		],
-		"platform": "stratagus",
-		"emulator": []
+		"emulator": [
+			"solarus"
+		]
 	},
 	{
 		"name": "tic80",
@@ -789,7 +790,8 @@
 				"retroarch": [
 					"tic80"
 				]
-			}
+			},
+			"tic80"
 		]
 	},
 	{
@@ -809,7 +811,8 @@
 				"retroarch": [
 					"opera"
 				]
-			}
+			},
+			"4do"
 		]
 	},
 	{
@@ -837,9 +840,12 @@
 		"emulator": [
 			{
 				"retroarch": [
-					"stella"
+					"stella",
+					"mame"
 				]
-			}
+			},
+			"stella",
+			"mame"
 		]
 	},
 	{
@@ -861,9 +867,12 @@
 		"emulator": [
 			{
 				"retroarch": [
-					"prosystem"
+					"prosystem",
+					"mame"
 				]
-			}
+			},
+			"a7800",
+			"mame"
 		]
 	},
 	{
@@ -885,13 +894,16 @@
 				"retroarch": [
 					"virtualjaguar"
 				]
-			}
+			},
+			"bigpemu"
 		]
 	},
 	{
 		"name": "atarijaguarcd",
 		"fullname": "Atari Jaguar CD",
-		"emulator": [],
+		"emulator": [
+			"bigpemu"
+		],
 		"extends": "atarijaguar"
 	},
 	{
@@ -908,10 +920,12 @@
 			{
 				"retroarch": [
 					"handy",
-					"beetle-lynx"
+					"beetle-lynx",
+					"mame"
 				]
 			},
-			"mednafen"
+			"mednafen",
+			"mame"
 		]
 	},
 	{
@@ -933,9 +947,11 @@
 		"emulator": [
 			{
 				"retroarch": [
-					"samecdi"
+					"samecdi",
+					"mame"
 				]
-			}
+			},
+			"mame"
 		]
 	},
 	{
@@ -958,9 +974,11 @@
 		"emulator": [
 			{
 				"retroarch": [
-					"freechaf"
+					"freechaf",
+					"mame"
 				]
-			}
+			},
+			"mame"
 		]
 	},
 	{
@@ -978,10 +996,13 @@
 			{
 				"retroarch": [
 					"bluemsx",
-					"gearcoleco"
+					"gearcoleco",
+					"mame"
 				]
 			},
-			"ares"
+			"ares",
+			"colem",
+			"mame"
 		]
 	},
 	{
@@ -1006,7 +1027,9 @@
 				"retroarch": [
 					"flycast"
 				]
-			}
+			},
+			"flycast",
+			"redream"
 		]
 	},
 	{
@@ -1031,9 +1054,11 @@
 		"emulator": [
 			{
 				"retroarch": [
-					"gw"
+					"gw",
+					"mame"
 				]
-			}
+			},
+			"mame"
 		]
 	},
 	{
@@ -1066,7 +1091,9 @@
 			},
 			"ares",
 			"mednafen",
-			"sameboy"
+			"sameboy",
+			"emulicious",
+			"mesen"
 		]
 	},
 	{
@@ -1093,7 +1120,9 @@
 				]
 			},
 			"ares",
-			"mednafen"
+			"mgba",
+			"mednafen",
+			"vba-m"
 		]
 	},
 	{
@@ -1190,9 +1219,11 @@
 		"emulator": [
 			{
 				"retroarch": [
-					"freeintv"
+					"freeintv",
+					"mame"
 				]
-			}
+			},
+			"mame"
 		]
 	},
 	{
@@ -1210,11 +1241,14 @@
 			{
 				"retroarch": [
 					"genesis-plus-gx",
-					"picodrive"
+					"picodrive",
+					"mame"
 				]
 			},
 			"ares",
-			"mednafen"
+			"mednafen",
+			"mame",
+			"emulicious"
 		]
 	},
 	{
@@ -1244,7 +1278,9 @@
 				]
 			},
 			"mupen64plus",
-			"ares"
+			"ares",
+			"rmg",
+			"project64"
 		]
 	},
 	{
@@ -1278,7 +1314,8 @@
 					"mame",
 					"fbneo"
 				]
-			}
+			},
+			"mame"
 		],
 		"extends": "neogeo"
 	},
@@ -1305,7 +1342,8 @@
 			},
 			"ares",
 			"mednafen",
-			"nestopia"
+			"nestopia",
+			"mesen"
 		]
 	},
 	{
@@ -1322,11 +1360,13 @@
 			{
 				"retroarch": [
 					"beetle-ngp",
-					"race"
+					"race",
+					"mame"
 				]
 			},
 			"ares",
-			"mednafen"
+			"mednafen",
+			"mame"
 		]
 	},
 	{
@@ -1349,7 +1389,8 @@
 					"o2em",
 					"mame"
 				]
-			}
+			},
+			"mame"
 		]
 	},
 	{
@@ -1381,7 +1422,8 @@
 				]
 			},
 			"ares",
-			"mednafen"
+			"mednafen",
+			"mesen"
 		]
 	},
 	{
@@ -1466,7 +1508,8 @@
 					"play!"
 				]
 			},
-			"pcsx2"
+			"pcsx2",
+			"play"
 		]
 	},
 	{
@@ -1566,7 +1609,9 @@
 			},
 			"snes9x",
 			"ares",
-			"mednafen"
+			"mednafen",
+			"mesen",
+			"bsnes"
 		]
 	},
 	{
@@ -1607,10 +1652,13 @@
 			{
 				"retroarch": [
 					"genesis-plus-gx",
-					"bluemsx"
+					"bluemsx",
+					"mame"
 				]
 			},
-			"ares"
+			"ares",
+			"mame",
+			"mastergear"
 		]
 	},
 	{
@@ -1631,7 +1679,8 @@
 				"retroarch": [
 					"uzem"
 				]
-			}
+			},
+			"cuzebox"
 		]
 	},
 	{
@@ -1647,9 +1696,11 @@
 		"emulator": [
 			{
 				"retroarch": [
-					"vecx"
+					"vecx",
+					"mame"
 				]
-			}
+			},
+			"mame"
 		]
 	},
 	{
@@ -1704,7 +1755,9 @@
 			".iso"
 		],
 		"platform": "xbox",
-		"emulator": []
+		"emulator": [
+			"xemu"
+		]
 	},
 	{
 		"name": "arcade",
@@ -1722,7 +1775,8 @@
 					"mame2003-plus",
 					"mame2010"
 				]
-			}
+			},
+			"mame"
 		]
 	},
 	{
@@ -1768,7 +1822,8 @@
 					"fbneo",
 					"fba2012"
 				]
-			}
+			},
+			"mame"
 		]
 	},
 	{
@@ -1799,13 +1854,12 @@
 		"fullname": "Sony PlayStation 3",
 		"category": "modern_console",
 		"extension": [
-			".self",
-			".elf",
-			".pkg",
-			".iso"
+			"PARAM.sfo"
 		],
 		"platform": "ps3",
-		"emulator": []
+		"emulator": [
+			"rpcs3"
+		]
 	},
 	{
 		"name": "psp",
@@ -1880,9 +1934,12 @@
 		"fullname": "Microsoft Xbox 360",
 		"category": "modern_console",
 		"extension": [
+			".iso",
 			".xex"
 		],
 		"platform": "xbox360",
-		"emulator": []
+		"emulator": [
+			"xenia"
+		]
 	}
 ]

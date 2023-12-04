@@ -16,37 +16,20 @@ signal game_receive_end
 
 var curr_game_data : RetroHubGameData = null
 
-var _joypad_echo_event : InputEvent
-var _joypad_echo_timer := Timer.new()
-var _joypad_echo_interval_timer := Timer.new()
-
 var _helper_config : Dictionary
 
-var _is_echo : bool
-
-const version_major := 0
-const version_minor := 2
+const version_major := 1
+const version_minor := 0
 const version_patch := 0
-const version_extra := "-beta"
-# FIXME: This worked before as "const version_str". Report regression?
+const version_extra := ""
 var version_str := "%d.%d.%d%s" % [version_major, version_minor, version_patch, version_extra]
 
-
 @onready var GameRandomData = preload("res://addons/retrohub_theme_helper/utils/GameRandomData.gd").new()
-
-func _enter_tree():
-	_joypad_echo_timer.wait_time = 1.0
-	_joypad_echo_interval_timer.wait_time = 0.1
-	_joypad_echo_timer.one_shot = true
-	_joypad_echo_timer.connect("timeout", Callable(self, "_on_joypad_echo_timer_timeout"))
-	_joypad_echo_interval_timer.connect("timeout", Callable(self, "_on_joypad_echo_interval_timer_timeout"))
-	add_child(_joypad_echo_timer)
-	add_child(_joypad_echo_interval_timer)
 
 func _ready():
 	emit_signal("app_initializing", true)
 	_load_helper_config()
-	load_titles()
+	_load_titles()
 
 func _notification(what):
 	match what:
@@ -54,37 +37,6 @@ func _notification(what):
 			emit_signal("app_received_focus")
 		NOTIFICATION_APPLICATION_FOCUS_OUT:
 			emit_signal("app_lost_focus")
-
-func _on_joypad_echo_timer_timeout():
-	_joypad_echo_interval_timer.start()
-	_joypad_echo_interval_timer.wait_time = 0
-
-func _on_joypad_echo_interval_timer_timeout():
-	Input.parse_input_event(_joypad_echo_event)
-
-func _input(event):
-	_is_echo = event.is_echo()
-	if event is InputEventJoypadButton or event is InputEventJoypadMotion:
-		if Input.is_action_just_released("ui_left") or Input.is_action_just_released("ui_up") \
-			or Input.is_action_just_released("ui_right") or Input.is_action_just_released("ui_down"):
-			_joypad_echo_timer.stop()
-			_joypad_echo_interval_timer.stop()
-
-		if Input.is_action_just_pressed("ui_left") or Input.is_action_just_pressed("ui_up") \
-			or Input.is_action_just_pressed("ui_right") or Input.is_action_just_pressed("ui_down"):
-			if _joypad_echo_timer.is_stopped():
-				_joypad_echo_event = event
-				_joypad_echo_timer.start()
-				print("Waiting...")
-
-func _on_app_closing():
-	emit_signal("app_closing")
-
-func _on_app_received_focus():
-	emit_signal("app_received_focus")
-
-func _on_app_lost_focus():
-	emit_signal("app_lost_focus")
 
 func _load_helper_config():
 	var path := "res://addons/retrohub_theme_helper/config.json"
@@ -101,9 +53,9 @@ func is_main_app() -> bool:
 	return false
 
 func is_input_echo() -> bool:
-	return _is_echo
+	return false
 
-func load_titles():
+func _load_titles():
 	await get_tree().process_frame
 	if _helper_config.has("games_mode"):
 		match _helper_config["games_mode"]:
@@ -162,7 +114,7 @@ func gen_random_game(system):
 	return game_data
 
 func load_local_titles():
-	RetroHubConfig.load_game_data_files()
+	RetroHubConfig._load_game_data_files()
 	var systems : Dictionary = RetroHubConfig.systems
 	if not systems.is_empty():
 		emit_signal("system_receive_start")
@@ -185,12 +137,9 @@ func launch_game() -> void:
 
 	print("Launching game ", curr_game_data.name)
 
-func stop_game():
-	print("Stopping game")
-	load_titles()
+func quit():
+	RetroHubMedia._stop_thread()
+	get_tree().quit()
 
 func request_theme_reload():
-	pass
-
-func kill_game_process():
 	pass
