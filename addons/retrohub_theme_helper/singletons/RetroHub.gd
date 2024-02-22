@@ -20,15 +20,17 @@ var _helper_config : Dictionary
 
 const version_major := 1
 const version_minor := 0
-const version_patch := 0
+const version_patch := 1
 const version_extra := ""
 var version_str := "%d.%d.%d%s" % [version_major, version_minor, version_patch, version_extra]
 
 @onready var GameRandomData = preload("res://addons/retrohub_theme_helper/utils/GameRandomData.gd").new()
 
+func _enter_tree():
+	_load_helper_config()
+
 func _ready():
 	emit_signal("app_initializing", true)
-	_load_helper_config()
 	_load_titles()
 
 func _notification(what):
